@@ -12,6 +12,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import { useRouter } from 'next/router';
 export default function Sidebar() {
     const [session, setSession] = useState(false);
+    const router = useRouter();
 
     const fetchData = async () => {
         try {
@@ -35,10 +36,12 @@ export default function Sidebar() {
             <nav className="h-4/6 flex my-auto bg-black w-full rounded-xl">
                 <ul className="h-full flex flex-col justify-evenly pl-2">
                     <li>
-                        <div className="flex ">
-                            <FaHome className="text-3xl" />
-                            <span className="px-2">Home</span>
-                        </div>
+                        <a href="/">
+                            <div className="flex ">
+                                <FaHome className="text-3xl" />
+                                <span className="px-2">Home</span>
+                            </div>
+                        </a>
                     </li>
                     {/* <li>
                         <div className="flex">
@@ -47,16 +50,20 @@ export default function Sidebar() {
                         </div>
                     </li> */}
                     <li>
-                        <div className="flex">
-                            <CiMap className="text-3xl" />
-                            <span className="px-2">Map</span>
-                        </div>
+                        <a href="/map">
+                            <div className="flex">
+                                <CiMap className="text-3xl" />
+                                <span className="px-2">Map</span>
+                            </div>
+                        </a>
                     </li>
                     <li>
-                        <div className="flex">
-                            <BsBarChart className="text-3xl" />
-                            <span className="px-2">Stats</span>
-                        </div>
+                        <a href="/stats">
+                            <div className="flex">
+                                <BsBarChart className="text-3xl" />
+                                <span className="px-2">Stats</span>
+                            </div>
+                        </a>
                     </li>
                     <li>
                         <div className="flex">

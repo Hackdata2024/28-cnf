@@ -28,6 +28,16 @@
     cursor: pointer;
 }
 
+.main_div {
+    margin-left: 200px !important;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 20px;
+    padding: 10px;
+    margin: 10px;
+    height: 80%;
+    overflow-y: scroll;
+}
+
 @media screen and (max-width: 700px) {
     .nav {
         display: none;
@@ -45,5 +55,10 @@
 
     .sidebar {
         width: 50px;
+    }
+
+    .main_div {
+        margin-left: 60px !important;
+        max-width: 300px;
     }
 }

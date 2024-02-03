@@ -6,7 +6,7 @@ import logo1 from "../../public/logo1.png";
 import logo2 from "../../public/logo2.png";
 import { useState, useEffect } from "react";
 import { supabase } from "@/pages/api/supabase";
-import styles from "@/styles/home.module.css";
+import styles from "@/styles/sign.module.css";
 
 
 export default function Profile() {
@@ -17,20 +17,26 @@ export default function Profile() {
         try {
             const { data, error } = await supabase.auth.getSession();
             setSession(data);
+            setAccount(session.session.user.user_metadata);
         } catch (error) {
             console.error("Error fetching session:", error);
         }
     };
+
     useEffect(() => {
         fetchData();
-    }, []);
+    }, [fetchData()]);
 
     return (
         <div className={styles.form_container}>
             <h2 className="text-center text-2xl">Profile</h2>
-            <p>Name: <span>{session}</span></p>
-            <p>Email: <span></span></p>
-            <p>Phone Number: <span></span></p>
+            {(account) ?
+                <>
+                    <p>Name: <span>{account.first_name + " " + account.last_name}</span></p>
+                    <p>Email: <span>{session.session.user.email}</span></p>
+                    <p>Phone Number: <span>{account.phone}</span></p>
+                </> : <></>
+            }
         </div>
     );
 }
