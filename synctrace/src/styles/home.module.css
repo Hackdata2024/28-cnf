@@ -1,0 +1,49 @@
+.sidebar {
+    height: calc(100vh - 80px);
+}
+
+.body {
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.login {
+    background-color: orange;
+    padding: 5px 8px;
+    border-radius: 10px;
+    color: black;
+    font-weight: 600;
+    width: 80px;
+}
+
+.header img {
+    min-width: 150px;
+    min-height: 150px;
+    max-width: 150px;
+    max-height: 150px;
+}
+
+.sidebar li {
+    cursor: pointer;
+}
+
+@media screen and (max-width: 700px) {
+    .nav {
+        display: none;
+    }
+
+    .acc_section {
+        margin: 0;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .sidebar span {
+        display: none;
+    }
+
+    .sidebar {
+        width: 50px;
+    }
+}
