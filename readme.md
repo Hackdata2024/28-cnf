@@ -16,7 +16,7 @@ SyncTrace is a hardware project aimed at facilitating real-time tracking and dat
 The system consists of a transmitter, receiver, and a web application with full authentication capabilities. 
 
 
-### Components:
+## Components:
 **Transmitter:** Utilizes SX1278 LoRa Module along with the Neo 6 GPS device to collect location data and transmits it over the network to the receiver.
 
 **Receiver:** Another SX1278 LoRa Module receives the data transmitted by the transmitter and sends data to store it in a database.
@@ -26,22 +26,22 @@ The system consists of a transmitter, receiver, and a web application with full 
 **Web Application:** Provides a user-friendly interface with full authentication to track the device and generate statistics based on the collected coordinates.
 
 
-### Features:
+## Features:
 Real-time tracking of devices equipped with Neo 6 GPS devices using LoRawlan.
 Secure access to tracking data via a web application with authentication.
 Statistical analysis and visualization of location data using Map.
 
-### Explation
+## Explation
 Our project utilizes two SX1278 LoRa Modules, one for transmission and the other for reception. The transmitter module is equipped with a Neo 6M GPS Module to gather GPS coordinates. These modules establish a connection between the transmitter and receiver, allowing the transmission of GPS coordinates.
 
 **Here's how it works:**
-##### Transmitter Setup: 
+### Transmitter Setup: 
 The transmitter module, containing the Neo 6M GPS Module, gathers real-time GPS coordinates of the device's location.
-##### Transmission: 
+### Transmission: 
 The transmitter module sends these GPS coordinates to the receiver module using LoRa communication.
-#####  Reception and Storage: 
+###  Reception and Storage: 
 The receiver module, connected to a laptop via Arduino Uno, receives the GPS coordinates and stores them in a database, in this case, "Supabase".
-##### Web Application: 
+### Web Application: 
 A web application with user authentication capabilities provides a dashboard. Users can view information about available LoRaWAN routers and transmitters. Additionally, they can access a map feature displaying the current location of the transmitter, helping admin to track travelers' location.
 
 This system enhances safety and tracking capabilities for travelers in remote areas, providing real-time location updates even where traditional communication methods are unavailable. The integration of LoRa technology with GPS modules ensures reliable communication and accurate positioning, while the web application offers an intuitive interface for users to access and visualize the data collected from the field.
