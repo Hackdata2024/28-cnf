@@ -6,49 +6,81 @@ import TableContainer from '@mui/material/TableContainer';
 import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
-
-function createData(name, calories, fat, carbs, protein) {
-    return { name, calories, fat, carbs, protein };
-}
-
-const rows = [
-    createData('Frozen yoghurt', 159, 6.0, 24, 4.0),
-    createData('Ice cream sandwich', 237, 9.0, 37, 4.3),
-    createData('Eclair', 262, 16.0, 24, 6.0),
-    createData('Cupcake', 305, 3.7, 67, 4.3),
-    createData('Gingerbread', 356, 16.0, 49, 3.9),
-];
+import { supabase } from "@/pages/api/supabase";
+import Navbar from '@/components/Navbar';
+import Sidebar from '@/components/Sidebar';
+import { useState, useEffect } from 'react';
+import toast, { Toaster } from 'react-hot-toast';
+import styles from "../styles/home.module.css";
 
 export default function BasicTable() {
+    const [data, setData] = useState([]);
+    const [session, setSession] = useState();
+    const fetchSession = async () => {
+        try {
+            const { data, error } = await supabase.auth.getSession();
+            setSession(data);
+            fetchData();
+        } catch (error) {
+            console.error("Error fetching session:", error);
+        }
+    };
+    const fetchData = async () => {
+        try {
+            let { data: coordinates, error } = await supabase
+                .from('coordinates')
+                .select('*');
+            if (!error) {
+                setData(coordinates);
+                toast.success('Coordinates Updated!')
+            } else {
+                console.error('Error fetching data:', error);
+            }
+        } catch (error) {
+            console.error('Error fetching data:', error);
+        }
+    };
+
+    useEffect(() => {
+        fetchSession();
+        const intervalId = setInterval(fetchSession, 5000);
+        return () => clearInterval(intervalId);
+    }, []);
+
     return (
-        <TableContainer component={Paper}>
-            <Table sx={{ minWidth: 650 }} aria-label="simple table">
-                <TableHead>
-                    <TableRow>
-                        <TableCell>Dessert (100g serving)</TableCell>
-                        <TableCell align="right">Calories</TableCell>
-                        <TableCell align="right">Fat&nbsp;(g)</TableCell>
-                        <TableCell align="right">Carbs&nbsp;(g)</TableCell>
-                        <TableCell align="right">Protein&nbsp;(g)</TableCell>
-                    </TableRow>
-                </TableHead>
-                <TableBody>
-                    {rows.map((row) => (
-                        <TableRow
-                            key={row.name}
-                            sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
-                        >
-                            <TableCell component="th" scope="row">
-                                {row.name}
-                            </TableCell>
-                            <TableCell align="right">{row.calories}</TableCell>
-                            <TableCell align="right">{row.fat}</TableCell>
-                            <TableCell align="right">{row.carbs}</TableCell>
-                            <TableCell align="right">{row.protein}</TableCell>
-                        </TableRow>
-                    ))}
-                </TableBody>
-            </Table>
-        </TableContainer>
+        <>
+            <Navbar />
+            <Sidebar />
+            {(session?.session) ?
+                <TableContainer sx={{ marginY: 10, minWidth: 300, maxWidth: 650, margin: "0 auto", maxHeight: 700, height: 700, overflowY: "scroll" }} component={Paper}>
+                    <Table aria-label="simple table">
+                        <TableHead>
+                            <TableRow>
+                                <TableCell>Time</TableCell>
+                                <TableCell>Latitude</TableCell>
+                                <TableCell>Longitude</TableCell>
+                                <TableCell>Map Link</TableCell>
+                            </TableRow>
+                        </TableHead>
+                        <TableBody>
+                            {data.toReversed().map((data) => (
+                                <TableRow
+                                    key={data.id}
+                                    sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
+                                >
+                                    <TableCell>{new Date(data.created_at).toLocaleString()}</TableCell>
+                                    <TableCell>{data.latitude}</TableCell>
+                                    <TableCell>{data.longitude}</TableCell>
+                                    <TableCell><a href={`https://www.google.co.in/maps/search/${data.latitude},${data.longitude}`} target="_blank">Map Link</a></TableCell>
+
+                                </TableRow>
+                            ))}
+                        </TableBody>
+                    </Table>
+                    <Toaster />
+                </TableContainer> :
+                <p className={styles.unavailable}>No Data available as no user Logged In!</p>
+            }
+        </>
     );
 }
