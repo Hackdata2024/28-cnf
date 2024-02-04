@@ -91,7 +91,7 @@ export default function SignUp() {
                     <input className={styles.submit} type="submit" value="Sign Up" />
                     <div>
                         <p className="text-center">
-                            Already have an account? <Link to="/login">Login</Link>
+                            Already have an account? <Link href="/login">Login</Link>
                         </p>
                     </div>
                 </div>

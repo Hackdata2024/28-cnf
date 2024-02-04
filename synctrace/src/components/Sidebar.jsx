@@ -38,7 +38,7 @@ export default function Sidebar() {
             <nav className="h-4/6 flex my-auto bg-black w-full rounded-xl">
                 <ul className="h-full flex flex-col justify-evenly pl-2">
                     <li>
-                        <Link to="/">
+                        <Link href="/">
                             <div className="flex ">
                                 <FaHome className="text-3xl" />
                                 <span className="px-2">Home</span>
@@ -52,7 +52,7 @@ export default function Sidebar() {
                         </div>
                     </li> */}
                     <li>
-                        <Link to="/map">
+                        <Link href="/map">
                             <div className="flex">
                                 <CiMap className="text-3xl" />
                                 <span className="px-2">Map</span>
@@ -60,7 +60,7 @@ export default function Sidebar() {
                         </Link>
                     </li>
                     <li>
-                        <Link to="/stats">
+                        <Link href="/stats">
                             <div className="flex">
                                 <BsBarChart className="text-3xl" />
                                 <span className="px-2">Stats</span>
