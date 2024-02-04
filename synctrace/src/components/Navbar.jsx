@@ -7,7 +7,7 @@ import logo2 from "../../public/logo2.png";
 import { useState, useEffect } from "react";
 import { supabase } from "@/pages/api/supabase";
 import styles from "@/styles/home.module.css";
-
+import Link from "next/link";
 
 export default function Navbar() {
     const [account, setAccount] = useState(false);
@@ -28,15 +28,15 @@ export default function Navbar() {
     return (
         <header className={styles.header + " w-screen flex justify-between px-5 items-center h-[80px] bg-black"}>
             <div className="w-2/12">
-                <a href="/"><Image src={logo2} alt="logo" width="200" height="80" /></a>
+                <Link to="/"><Image src={logo2} alt="logo" width="200" height="80" /></Link>
             </div>
             <nav className={styles.nav + " w-4/12"}>
                 <ul className="w-full flex justify-evenly">
                     <li>
-                        <a href="/about">About</a>
+                        <Link to="/about">About</Link>
                     </li>
                     <li>
-                        <a href="/services">Services</a>
+                        <Link to="/services">Services</Link>
                     </li>
                 </ul>
             </nav>
@@ -44,7 +44,7 @@ export default function Navbar() {
                 <div className="flex text-2xl px-5">
                     <IoMdNotificationsOutline className="mx-1" />
                     {session.session ?
-                        <RiAccountCircleLine className="mx-1" /> : <button className={styles.login + " text-sm"}><a href="/login">Log In</a></button>
+                        <RiAccountCircleLine className="mx-1" /> : <button className={styles.login + " text-sm"}><Link to="/login">Log In</Link></button>
                     }
                 </div>
             </div>
