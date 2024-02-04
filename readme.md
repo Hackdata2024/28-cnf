@@ -1,6 +1,6 @@
 
 ## Context-Not-Found (Team-28)
-# High Altitude Pligrimage and Army Safety Tracking
+# High Altitude Pligrimage Tracking
 
 Develop a robust, weather-resistant tracking device for high-altitude pilgrimage sites like Kedarnath, Amarnath or for Indian military for their operations. The device ensures real-time location tracking, emergency communication by generating an alert message, and efficient power usage in harsh conditions with no mobile network or internet facility. It integrates seamlessly with existing emergency response networks for enhanced safety and well-being.
 
