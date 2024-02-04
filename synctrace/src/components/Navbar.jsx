@@ -23,6 +23,8 @@ export default function Navbar() {
     };
     useEffect(() => {
         fetchData();
+        const intervalId = setInterval(fetchData, 1000);
+        return () => clearInterval(intervalId);
     }, []);
 
     return (

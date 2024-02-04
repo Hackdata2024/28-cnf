@@ -32,7 +32,11 @@ export default function SignUp() {
                 }
             }
         )
-            .then(() => { reset({ firstName: "", lastName: "", email: "", phone: "", password: "" }); toast("Account Created! Login to Access Account!"); router.push('/login') })
+            .then(() => {
+                reset({ firstName: "", lastName: "", email: "", phone: "", password: "" });
+                toast("Account Created! Login to Access Account!");
+                router.push('/login')
+            })
             .catch((error) => console.log(error))
     };
 

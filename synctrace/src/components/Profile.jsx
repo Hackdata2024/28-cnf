@@ -25,7 +25,9 @@ export default function Profile() {
 
     useEffect(() => {
         fetchData();
-    }, [fetchData()]);
+        const intervalId = setInterval(fetchData, 5000);
+        return () => clearInterval(intervalId);
+    }, []);
 
     return (
         <div className={styles.form_container}>
