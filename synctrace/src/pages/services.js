@@ -29,7 +29,7 @@ export default function Services() {
                     <Card className="w-[300px]">
                         <CardHeader>
                             <CardTitle>Arduino Intelligence</CardTitle>
-                            <CardDescription>Powered by the versatility of Arduino, our location tracking system efficiently processes GPS data, making it accessible and ready for transmission. Arduino's flexibility and ease of programming enable users to customize tracking parameters, update rates, and integrate additional sensors seamlessly.</CardDescription>
+                            <CardDescription>Powered by the versatility of Arduino, our location tracking system efficiently processes GPS data, making it accessible and ready for transmission. Arduino&apos;s flexibility and ease of programming enable users to customize tracking parameters, update rates, and integrate additional sensors seamlessly.</CardDescription>
                         </CardHeader>
                     </Card>
                     <Card className="w-[300px]">
@@ -50,7 +50,7 @@ export default function Services() {
                     <Card className="w-[300px]">
                         <CardHeader>
                             <CardTitle>Low Power Consumption</CardTitle>
-                            <CardDescription>LoRa's efficiency ensures prolonged battery life, making the system suitable for long-term deployment without frequent maintenance.</CardDescription>
+                            <CardDescription>LoRa&apos;s efficiency ensures prolonged battery life, making the system suitable for long-term deployment without frequent maintenance.</CardDescription>
                         </CardHeader>
                     </Card>
                     <Card className="w-[300px]">
