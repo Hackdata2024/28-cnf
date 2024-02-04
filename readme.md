@@ -82,6 +82,7 @@ SyncTrace WebApp :
 
 ## Deployment
 
+![Website](https://snu-hackathon.vercel.app)
 To deploy this project run locally:
 
 ```bash
@@ -100,7 +101,7 @@ We are a Team of four:
     and generative AI, pushing the boundaries of AI creativity. With respect to the project at hand, Pushpak has worked on the Hardware prototype of the LORA based tracking device.
     2. Tanmay Newatia an Undergrad Student pursuing B. Tech in CSE at SRM University. As a person, he is a Tech and Data enthusiast, along with a very keen interest in learning new things. He has built my web-
     development base with HTML, CSS, Javascript and Bootstrap, ReactJS and Supabase. Further, he have a good knowledge of programming languages such as Python, C++, and C. He has worked on the Frontend and 
-    Backend of the web application host on [link](https://www.snu-hackathon.vercel.app.com) .
+    Backend of the web application.
     3. Sankalp Tiwari a third-year undergraduate student majoring in Computer Science Engineering at SRM Institute of Science and Technology (SRMIST). My academic journey has been fueled by a deep passion for 
     exploring the ever-evolving landscape of technology. Eager to understand the intricacies of computer science, I am committed to achieving excellence in both theory and practical application. Throughout my 
     studies, He have actively sought opportunities to engage in challenging projects, allowing me to hone my problem-solving skills and contribute meaningfully to the field. With a solid foundation in computer 
