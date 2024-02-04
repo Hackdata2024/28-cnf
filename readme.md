@@ -2,7 +2,7 @@
 ## Context-Not-Found (Team-28)
 # High Altitude Pligrimage Tracking
 
-Develop a robust, weather-resistant tracking device for high-altitude pilgrimage sites like Kedarnath, Amarnath or for Indian military for their operations. The device ensures real-time location tracking, emergency communication by generating an alert message, and efficient power usage in harsh conditions with no mobile network or internet facility. It integrates seamlessly with existing emergency response networks for enhanced safety and well-being.
+Develop a robust, weather-resistant tracking device for high-altitude pilgrimage sites like Kedarnath, Amarnath. The device ensures real-time location tracking, emergency communication by generating an alert message, and efficient power usage in harsh conditions with no mobile network or internet facility. It integrates seamlessly with existing emergency response networks for enhanced safety and well-being.
 
 ## Idea Presentation
 
@@ -53,11 +53,20 @@ SyncTrace WebApp :
 
 #### SnapShots
 
+Homepage
 ![home page ](https://github.com/Hackdata2024/28-cnf/assets/101463523/59295f17-22d5-4150-b439-3758ef12385d)
+Sign Up Page
 ![sign up page](https://github.com/Hackdata2024/28-cnf/assets/101463523/2652b5f3-397a-4b05-ad5a-3f5bcd3c296f)
+Login Page
 ![login page](https://github.com/Hackdata2024/28-cnf/assets/101463523/3ca1a05c-bdf0-40c5-b9df-dce27d7872eb)
+Coordinate Update Page
 ![coordinate update ](https://github.com/Hackdata2024/28-cnf/assets/101463523/574e4ff2-9087-4048-bb0a-10cd8ac0e9a6)
+Map Page
 ![map link](https://github.com/Hackdata2024/28-cnf/assets/101463523/558ad9d0-b5f4-4db3-894b-fdba8298a708)
+Receiver
+![IMG20240204111455](https://github.com/Hackdata2024/28-cnf/assets/101463523/850462ad-dc15-4cb8-83e0-779be138c37a)
+Transmitter
+![IMG20240204111441](https://github.com/Hackdata2024/28-cnf/assets/101463523/9a11ee4e-9007-4593-acea-90dc3012c03f)
 
 
 #### TechStack
