@@ -53,7 +53,11 @@ SyncTrace WebApp :
 
 #### SnapShots
 
-![App Screenshot](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
+![home page ](https://github.com/Hackdata2024/28-cnf/assets/101463523/59295f17-22d5-4150-b439-3758ef12385d)
+![sign up page](https://github.com/Hackdata2024/28-cnf/assets/101463523/2652b5f3-397a-4b05-ad5a-3f5bcd3c296f)
+![login page](https://github.com/Hackdata2024/28-cnf/assets/101463523/3ca1a05c-bdf0-40c5-b9df-dce27d7872eb)
+![coordinate update ](https://github.com/Hackdata2024/28-cnf/assets/101463523/574e4ff2-9087-4048-bb0a-10cd8ac0e9a6)
+![map link](https://github.com/Hackdata2024/28-cnf/assets/101463523/558ad9d0-b5f4-4db3-894b-fdba8298a708)
 
 
 #### TechStack
