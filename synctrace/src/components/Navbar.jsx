@@ -33,10 +33,10 @@ export default function Navbar() {
             <nav className={styles.nav + " w-4/12"}>
                 <ul className="w-full flex justify-evenly">
                     <li>
-                        <a href="#">About</a>
+                        <a href="/about">About</a>
                     </li>
                     <li>
-                        <a href="#">Services</a>
+                        <a href="/services">Services</a>
                     </li>
                 </ul>
             </nav>

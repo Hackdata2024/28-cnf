@@ -28,6 +28,33 @@
     cursor: pointer;
 }
 
+.main_div, .main_div2 {
+    margin-left: 200px !important;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 20px;
+    padding: 10px;
+    margin: 10px;
+    height: 80%;
+    overflow-y: scroll;
+}
+
+.main_div2 {
+    overflow: hidden !important;
+}
+
+.unavailable {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    background-color: red;
+    padding: 10px;
+    font-size: 24px;
+    border-radius: 10px;
+    color: black;
+    font-weight: 600;
+}
+
 @media screen and (max-width: 700px) {
     .nav {
         display: none;
@@ -45,5 +72,10 @@
 
     .sidebar {
         width: 50px;
+    }
+
+    .main_div {
+        margin-left: 60px !important;
+        max-width: 300px;
     }
 }
