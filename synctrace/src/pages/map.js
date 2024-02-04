@@ -12,6 +12,7 @@ import Sidebar from '@/components/Sidebar';
 import { useState, useEffect } from 'react';
 import toast, { Toaster } from 'react-hot-toast';
 import styles from "../styles/home.module.css";
+import Link from 'next/link';
 
 export default function BasicTable() {
     const [data, setData] = useState([]);
@@ -71,7 +72,7 @@ export default function BasicTable() {
                                     <TableCell>{new Date(data.created_at).toLocaleString()}</TableCell>
                                     <TableCell>{data.latitude}</TableCell>
                                     <TableCell>{data.longitude}</TableCell>
-                                    <TableCell><a href={`https://www.google.co.in/maps/search/${data.latitude},${data.longitude}`} target="_blank">Map Link</a></TableCell>
+                                    <TableCell><Link to={`https://www.google.co.in/maps/search/${data.latitude},${data.longitude}`} target="_blank">Map Link</Link></TableCell>
 
                                 </TableRow>
                             ))}

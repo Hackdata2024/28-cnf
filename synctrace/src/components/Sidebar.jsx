@@ -10,6 +10,8 @@ import { useState, useEffect } from "react";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { useRouter } from 'next/router';
+import Link from "next/link";
+
 export default function Sidebar() {
     const [session, setSession] = useState(false);
     const router = useRouter();
@@ -36,12 +38,12 @@ export default function Sidebar() {
             <nav className="h-4/6 flex my-auto bg-black w-full rounded-xl">
                 <ul className="h-full flex flex-col justify-evenly pl-2">
                     <li>
-                        <a href="/">
+                        <Link to="/">
                             <div className="flex ">
                                 <FaHome className="text-3xl" />
                                 <span className="px-2">Home</span>
                             </div>
-                        </a>
+                        </Link>
                     </li>
                     {/* <li>
                         <div className="flex">
@@ -50,20 +52,20 @@ export default function Sidebar() {
                         </div>
                     </li> */}
                     <li>
-                        <a href="/map">
+                        <Link to="/map">
                             <div className="flex">
                                 <CiMap className="text-3xl" />
                                 <span className="px-2">Map</span>
                             </div>
-                        </a>
+                        </Link>
                     </li>
                     <li>
-                        <a href="/stats">
+                        <Link to="/stats">
                             <div className="flex">
                                 <BsBarChart className="text-3xl" />
                                 <span className="px-2">Stats</span>
                             </div>
-                        </a>
+                        </Link>
                     </li>
                     <li>
                         <div className="flex">

@@ -4,6 +4,7 @@ import styles from "../styles/sign.module.css";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { useRouter } from 'next/router';
+import Link from "next/link";
 
 export default function SignUp() {
     const router = useRouter();
@@ -90,7 +91,7 @@ export default function SignUp() {
                     <input className={styles.submit} type="submit" value="Sign Up" />
                     <div>
                         <p className="text-center">
-                            Already have an account? <a href="/login">Login</a>
+                            Already have an account? <Link to="/login">Login</Link>
                         </p>
                     </div>
                 </div>
