@@ -53,19 +53,19 @@ SyncTrace WebApp :
 
 #### SnapShots
 
-Homepage
+### Homepage
 ![home page ](https://github.com/Hackdata2024/28-cnf/assets/101463523/59295f17-22d5-4150-b439-3758ef12385d)
-Sign Up Page
+### Sign Up Page
 ![sign up page](https://github.com/Hackdata2024/28-cnf/assets/101463523/2652b5f3-397a-4b05-ad5a-3f5bcd3c296f)
-Login Page
+### Login Page
 ![login page](https://github.com/Hackdata2024/28-cnf/assets/101463523/3ca1a05c-bdf0-40c5-b9df-dce27d7872eb)
-Coordinate Update Page
+### Coordinate Update Page
 ![coordinate update ](https://github.com/Hackdata2024/28-cnf/assets/101463523/574e4ff2-9087-4048-bb0a-10cd8ac0e9a6)
-Map Page
+### Map Page
 ![map link](https://github.com/Hackdata2024/28-cnf/assets/101463523/558ad9d0-b5f4-4db3-894b-fdba8298a708)
-Receiver
+### Receiver
 ![IMG20240204111455](https://github.com/Hackdata2024/28-cnf/assets/101463523/850462ad-dc15-4cb8-83e0-779be138c37a)
-Transmitter
+### Transmitter
 ![IMG20240204111441](https://github.com/Hackdata2024/28-cnf/assets/101463523/9a11ee4e-9007-4593-acea-90dc3012c03f)
 
 
