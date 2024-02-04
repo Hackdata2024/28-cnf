@@ -83,6 +83,7 @@ SyncTrace WebApp :
 ## Deployment
 
 ![Website](https://snu-hackathon.vercel.app)
+
 To deploy this project run locally:
 
 ```bash
