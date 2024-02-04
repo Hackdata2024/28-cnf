@@ -72,7 +72,7 @@ export default function BasicTable() {
                                     <TableCell>{new Date(data.created_at).toLocaleString()}</TableCell>
                                     <TableCell>{data.latitude}</TableCell>
                                     <TableCell>{data.longitude}</TableCell>
-                                    <TableCell><Link to={`https://www.google.co.in/maps/search/${data.latitude},${data.longitude}`} target="_blank">Map Link</Link></TableCell>
+                                    <TableCell><Link href={`https://www.google.co.in/maps/search/${data.latitude},${data.longitude}`} target="_blank">Map Link</Link></TableCell>
 
                                 </TableRow>
                             ))}

@@ -50,7 +50,7 @@ export default function Login() {
                     <input className={styles.submit} type="submit" value="Login" />
                     <div>
                         <p className="text-center">
-                            Already have an account? <Link to="/signup">Sign Up</Link>
+                            Already have an account? <Link href="/signup">Sign Up</Link>
                         </p>
                     </div>
                 </div>
